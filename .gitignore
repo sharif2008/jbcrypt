@@ -6,15 +6,6 @@
 .project
 *.log
 log4j.properties
-.externalToolBuilders/
-Test.java
-*.xml
-*.prefs
-.metadata
-.directory
-.settings/.jsdtscope
-.settings/org.eclipse.jdt.core.prefs
-.settings/org.eclipse.wst.common.component
-.settings/org.eclipse.wst.common.project.facet.core.xml
-.idea
+org/mindrot/jbcrypt/BCrypt.class
+org/mindrot/jbcrypt/BcryptTest.class
 

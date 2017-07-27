@@ -661,7 +661,7 @@ public class BCrypt {
 			off = 3;
 		else {
 			minor = salt.charAt(2);
-			if (minor != 'a' || salt.charAt(3) != '$')
+			if (minor != 'y' || salt.charAt(3) != '$')
 				throw new IllegalArgumentException ("Invalid salt revision");
 			off = 4;
 		}
@@ -673,7 +673,7 @@ public class BCrypt {
 
 		real_salt = salt.substring(off + 3, off + 25);
 		try {
-			passwordb = (password + (minor >= 'a' ? "\000" : "")).getBytes("UTF-8");
+			passwordb = (password + (minor >= 'y' ? "\000" : "")).getBytes("UTF-8");
 		} catch (UnsupportedEncodingException uee) {
 			throw new AssertionError("UTF-8 is not supported");
 		}
@@ -685,7 +685,7 @@ public class BCrypt {
 		    (int[])bf_crypt_ciphertext.clone());
 
 		rs.append("$2");
-		if (minor >= 'a')
+		if (minor >= 'y')
 			rs.append(minor);
 		rs.append("$");
 		if (rounds < 10)
@@ -716,7 +716,7 @@ public class BCrypt {
 
 		random.nextBytes(rnd);
 
-		rs.append("$2a$");
+		rs.append("$2y$");
 		if (log_rounds < 10)
 			rs.append("0");
 		if (log_rounds > 30) {

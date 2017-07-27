@@ -39,7 +39,7 @@ public class BcryptTest {
 	public static boolean checkPassword(String password_plaintext, String stored_hash) {
 		boolean password_verified = false;
 
-		if(null == stored_hash || !stored_hash.startsWith("$2a$"))
+		if(null == stored_hash || !stored_hash.startsWith("$2y$"))
 			throw new java.lang.IllegalArgumentException("Invalid hash provided for comparison");
 
 		password_verified = BCrypt.checkpw(password_plaintext, stored_hash);
@@ -53,8 +53,8 @@ public class BcryptTest {
 	  * just the same.
 	  */
 	public static void main(String[] args) {
-		String test_passwd = "16121971";
-		String test_hash = "$2a$10$Vf10E8sc0nrXJcl.maDr3OLsy6hvVXKM9YgRJEsnqY1jiSXLWyCj6";
+		String test_passwd = "admin";
+		String test_hash = "$2y$10$qHsRVLMar167hJEKmKrZgu.FDQXgJCcw9RRoAMwfzYU3..E.XzVfe";
 
 		System.out.println("Testing BCrypt Password hashing and verification");
 		System.out.println("Test password: " + test_passwd);
