@@ -1,5 +1,4 @@
 # What is jbcrypt
-<------------------------------------>
 In PHP  password_hash() creates a new password hash using a strong one-way hashing algorithm. password_hash() is compatible with crypt(). Therefore, password hashes created by crypt() can be used with password_hash().
 
 The following algorithms are currently supported:
@@ -21,8 +20,6 @@ jBCrypt is an implementation the OpenBSD Blowfish password hashing algorithm, as
 This system hashes passwords using a version of Bruce Schneier's  Blowfish block cipher with modifications designed to raise the cost of off-line password cracking. The computation cost of the algorithm is parameterised, so it can be increased as computers get faster.
 
 ## How to use
-<--------------------------------------------------------------------->
-
 A simple example that demonstrates most of the features:
 
 	// Hash a password for the first time
@@ -41,8 +38,6 @@ A simple example that demonstrates most of the features:
  
  
 ## Licence
-<------------------->
- 
- jBCrypt is licensed under a ISC/BSD licence. See the LICENSE file for details. http://www.mindrot.org/files/jBCrypt/LICENSE
+jBCrypt is licensed under a ISC/BSD licence. See the LICENSE file for details. http://www.mindrot.org/files/jBCrypt/LICENSE
 
 
